@@ -2,7 +2,7 @@
 
 var input = File.ReadAllLines(@"input.txt");
 
-double part1sum = 0;
+int part1sum = 0;
 foreach (var line in input) {
     var first = line.First(x => char.IsNumber(x));
     var last = line.Last(x => char.IsNumber(x));
@@ -12,7 +12,7 @@ foreach (var line in input) {
 Console.WriteLine($"Part 1: Sum of all calibration values: {part1sum}");
 
 
-double part2sum = 0;
+int part2sum = 0;
 var spelled_numbers = new Dictionary<string, string>() { { "one", "1" }, { "two", "2" }, { "three", "3" }, { "four", "4" }, { "five", "5" }, { "six", "6" }, { "seven", "7" }, { "eight", "8" }, { "nine", "9" } };
 var pattern = @"\d|one|two|three|four|five|six|seven|eight|nine";
 foreach (var line in input) {
